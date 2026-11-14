@@ -22,7 +22,7 @@ permissions:
 
 env:
   SERVICE: metric-service
-  IMAGE: ${{ vars.DOCKERHUB_USER }}/recommendation-system-metric-service
+  IMAGE: ${{ vars.DOCKERHUB_USER }}/hackathon-recommendation-system-metric-service
 
 jobs:
   test:
