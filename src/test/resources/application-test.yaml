@@ -1,0 +1,7 @@
+app:
+  events:
+    import-path: classpath:fixtures/events.json
+
+logging:
+  file:
+    name: ""
