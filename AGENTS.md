@@ -9,7 +9,7 @@ Stores what users do with materials and computes metrics from it: the history of
 - Events are append-only rows. Metrics are computed with SQL on request, never kept only as counters.
 - `user_id` and `material_id` are text, because imported history uses the ids of the case data. App events store the UUID from `X-User-Id`.
 - `source` is `APP` (frontend), `IMPORT` (case data) or `SYNTHETIC` (generated test data, which the case allows).
-- At startup `EventImporter` loads `EVENTS_IMPORT_PATH` once, a JSON array of `EventImportDto` (`userId`, `type`, `materialId`, `occurredAt`, `sessionId`). If imported events already exist, it skips. As with the catalog, the layout of the case data isn't mapped yet.
+- At startup `EventImporter` loads `EVENTS_IMPORT_PATH` once, a JSON array of `EventImportDto` (`userId`, `type`, `materialId`, `occurredAt`, `sessionId`). If imported events already exist, it skips. The `case-data` service of the compose file in Documentation writes this file from the case dump with `case-data/events.sql`: course enrollments become `START`, completions `COMPLETE`, and lesson ratings averaged per course `LIKE` (4 or more) or `DISLIKE` (2 or less), with the anonymized user ids of the dump.
 
 ## Event types
 

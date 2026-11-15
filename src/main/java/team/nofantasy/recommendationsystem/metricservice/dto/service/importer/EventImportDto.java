@@ -6,7 +6,8 @@ import java.time.Instant;
 
 /**
  * One historical event in the import file: a JSON array of these objects.
- * The case data has its own layout; convert it to this format, or add an adapter in the importer package.
+ * The case-data service of the compose file writes it from the case dump; the mapping lives in
+ * {@code case-data/events.sql} of the Documentation repository.
  */
 public record EventImportDto(
         String userId,
