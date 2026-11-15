@@ -1,4 +1,4 @@
-package team.nofantasy.recommendationsystem.metricservice.config;
+package team.nofantasy.recommendationsystem.metricservice.configuration.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

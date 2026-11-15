@@ -7,7 +7,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
-import team.nofantasy.recommendationsystem.metricservice.config.EventsProperties;
+import team.nofantasy.recommendationsystem.metricservice.configuration.properties.EventsProperties;
 import team.nofantasy.recommendationsystem.metricservice.dto.service.importer.EventImportDto;
 import team.nofantasy.recommendationsystem.metricservice.entity.Event;
 import team.nofantasy.recommendationsystem.metricservice.repository.EventRepository;

@@ -1,4 +1,4 @@
-package team.nofantasy.recommendationsystem.metricservice.config;
+package team.nofantasy.recommendationsystem.metricservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
