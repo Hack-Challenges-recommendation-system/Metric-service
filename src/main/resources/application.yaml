@@ -36,6 +36,7 @@ logging:
   structured:
     format:
       file: ecs # Loki supports it
+      console: ecs
     json:
       exclude: ecs
 
@@ -43,3 +44,15 @@ app:
   events:
     # e.g. file:/data/events.json; empty skips the import
     import-path: ${EVENTS_IMPORT_PATH:}
+
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true

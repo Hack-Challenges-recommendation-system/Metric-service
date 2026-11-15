@@ -35,9 +35,24 @@ public interface EventRepository extends JpaRepository<Event, UUID> {
         Long getUsers();
     }
 
+    interface EventCounts {
+        String getEventType();
+
+        String getEventSource();
+
+        Long getEventCount();
+    }
+
     List<Event> findByUserIdOrderByOccurredAtDesc(String userId, Limit limit);
 
     boolean existsBySource(Event.EventSource source);
+
+    @Query(value = """
+            SELECT type AS "eventType", source AS "eventSource", count(*) AS "eventCount"
+            FROM event
+            GROUP BY type, source
+            """, nativeQuery = true)
+    List<EventCounts> countByTypeAndSource();
 
     /**
      * Event counts per A/B variant in {@code [from, to)}. A returning user was active on more than one day.
