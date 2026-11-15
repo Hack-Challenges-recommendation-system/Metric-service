@@ -1,0 +1,6 @@
+[
+  {"userId": "dump-u1", "type": "START", "materialId": "dump-m1", "occurredAt": "2026-10-01T10:00:00Z", "sessionId": "s-1"},
+  {"userId": "dump-u2", "type": "START", "materialId": "dump-m1", "occurredAt": "2026-10-02T10:00:00Z"},
+  {"userId": "dump-u1", "type": "COMPLETE", "materialId": "dump-m2", "occurredAt": "2026-10-03T10:00:00Z"},
+  {"userId": "dump-u3", "type": "START", "occurredAt": "2026-10-04T10:00:00Z"}
+]
